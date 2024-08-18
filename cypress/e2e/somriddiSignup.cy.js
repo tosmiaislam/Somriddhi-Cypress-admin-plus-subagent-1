@@ -5,6 +5,7 @@ describe('dropdown handel',()=>{
         cy.get('#name').should('have.attr', 'placeholder', 'Enter name').type(userID_Alpha());
         cy.get('#phone').should('have.attr', 'placeholder', '01xxxxxxxxx').type(userID_Alpha()+'@gmail.com');
         cy.contains("Register").wait(1000).click()
+        cy.get('')
 })
 
 })
