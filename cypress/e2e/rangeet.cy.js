@@ -57,6 +57,5 @@ cy.scrollTo('bottom', { duration: 10000 })
     cy.contains('a[title="Overview Subscription"]', 'Overview Subscription').find('span').wait(1000).click()
     cy.contains('a[title="Overview Additional Subscription"]', 'Overview Additional Subscription').find('span').wait(1000).click()
 })
-aaa
-sessionStorage
+
 });
