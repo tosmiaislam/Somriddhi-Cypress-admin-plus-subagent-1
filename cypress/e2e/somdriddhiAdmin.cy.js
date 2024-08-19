@@ -36,7 +36,7 @@ describe('dropdown handel plus makeing user from admin',()=>{
         //1st dropdown
         cy.get('#user_type_id').select('Sub Agent')
 
-        //2nd dropdown
+        //2nd dropdown - type select dropdown
         cy.get("textarea[placeholder='Select Roles']").click()
         cy.get("textarea[placeholder='Select Roles']").type('Suba')
         cy.get("textarea[placeholder='Select Roles']").type('{enter}')
