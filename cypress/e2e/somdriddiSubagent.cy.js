@@ -7,6 +7,7 @@ describe('dropdown handel',()=>{
 
         cy.contains('Dashboard').click();
 
+        //Bill Pay
         cy.contains('Pay Bill').click();
 
         //1st dropdown
@@ -16,9 +17,7 @@ describe('dropdown handel',()=>{
         cy.get('#BILL_NUMBER').should('have.attr', 'placeholder', 'ENTER YOUR BILL NUMBER').type("T82372008641");
         cy.contains('See Your Bill').click();
 
-        //cy.get(".nesco postpaid']").click()
-
-       // cy.get("textarea[placeholder='Select Roles']").type('Suba')
+        // cy.get("textarea[placeholder='Select Roles']").type('Suba')
         //cy.get("textarea[placeholder='Select Roles']").type('{enter}')
     
     })
