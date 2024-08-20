@@ -6,24 +6,24 @@ describe('user_registration', () => {
         const lnameBang = [' ইসলাম নিশাত'];
         const email = `${fnameEng[0].toLowerCase()}@gmail.com`
 
-
         cy.visit('https://lams.dev.z8.softbd.xyz/');
         cy.get('.css-1yeg3l4').click();
         cy.get('[href="/registration"] > .MuiButtonBase-root').click();
         cy.get(':nth-child(2) > a > .MuiPaper-root').click();
 
-        const banRandomFname = fnameEng[Math.floor(Math.random() * fnameEng.length)];
-        cy.get('#\\:r0\\:').should('be.visible').type(banRandomFname);
+        const EngRandomFname = fnameEng[Math.floor(Math.random() * fnameEng.length)];
+        cy.get('#\\:r2\\:').should('be.visible').type(EngRandomFname);
         // Select a random last name bangla from the array
-        const banRandomLname = lnameEng[Math.floor(Math.random() * lnameEng.length)];
-        cy.get('#\\:r1\\:').type(banRandomLname);
+        const EngRandomLname = lnameEng[Math.floor(Math.random() * lnameEng.length)];
+        cy.get('#\\:r3\\:').type(EngRandomLname);
+        // Mobile Number (English)
 
         // Select a random first name bangla from the array
-        const EngRandomFname = fnameBang[Math.floor(Math.random() * fnameBang.length)];
-        cy.get('#\\:r2\\:').type(EngRandomFname);
+        const BangRandomFname = fnameBang[Math.floor(Math.random() * fnameBang.length)];
+        cy.get('#\\:r0\\:').type(BangRandomFname);
         // Select a random last name english from the array
-        const EngRandomLname = lnameBang[Math.floor(Math.random() * lnameBang.length)];
-        cy.get('#\\:r3\\:').type(EngRandomLname);
+        const BangRandomLname = lnameBang[Math.floor(Math.random() * lnameBang.length)];
+        cy.get('#\\:r1\\:').type(BangRandomLname);
 
         // Mobile Number (English)
         const prefix = '017';
@@ -50,17 +50,17 @@ describe('user_registration', () => {
         cy.get('#\\:r8\\:').type('01/01/2000');
         cy.get('#\\:r8\\:').should('have.value', '01/01/2000');
 
-        //2nd dropdown
+        //2nd dropdown- officer
         cy.get('#\\:ra\\:').click();
         cy.get('ul[role="listbox"] li').contains('Officer').click();
         cy.get('#\\:ra\\:').should('have.value', 'Officer');
 
-        //3rd dropdown
+        //3rd dropdown - 
         cy.get('#\\:rc\\:').click();
         cy.get('ul[role="listbox"] li').contains('Permanent').click();
         cy.get('#\\:rc\\:').should('have.value', 'Permanent');
 
-        //4rd dropdown
+        //4rd dropdown - grade
         cy.get('#\\:rs\\:').click();
         cy.get('ul[role="listbox"] li').contains('1st grade').click();
         cy.get('#\\:rs\\:').should('have.value', '1st grade');
@@ -85,8 +85,17 @@ describe('user_registration', () => {
 
         //password
         cy.get('#\\:rk\\:').type('121212aA')
+        // retype password
         cy.get('#\\:rl\\:').type('121212aA')
 
+        // Extract the CAPTCHA text
+        cy.get('.MuiTypography-root[aria-readonly="true"]').invoke('text').then((captchaText) => {
+            // Use the extracted CAPTCHA text in the input field
+            cy.get('#\\:rn\\:').type(captchaText);
+        });
+
+        //button
+        cy.contains('button', 'Create Account').click();
       
     })
 })
