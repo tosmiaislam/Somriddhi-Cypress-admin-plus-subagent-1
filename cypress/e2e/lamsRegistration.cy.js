@@ -55,7 +55,7 @@ describe('user_registration', () => {
         cy.get('ul[role="listbox"] li').contains('Officer').click();
         cy.get('#\\:ra\\:').should('have.value', 'Officer');
 
-        //3rd dropdown - 
+        //3rd dropdown -  Employment Type
         cy.get('#\\:rc\\:').click();
         cy.get('ul[role="listbox"] li').contains('Permanent').click();
         cy.get('#\\:rc\\:').should('have.value', 'Permanent');
@@ -79,7 +79,7 @@ describe('user_registration', () => {
         cy.get('ul[role="listbox"] li').contains('Ministry of Finance').click();
         cy.get('#\\:r10\\:').should('have.value', 'Ministry of Finance');
 
-        //current JOINING DATE 
+        //Current Office Joining Date *
         cy.get('#\\:ri\\:').type('01/01/2023');
         cy.get('#\\:ri\\:').should('have.value', '01/01/2023');
 
