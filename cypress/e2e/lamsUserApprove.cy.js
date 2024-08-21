@@ -24,6 +24,7 @@ describe('user_registration', () => {
         cy.wrap($el).scrollIntoView().click({ force: true });
         cy.get('button').contains('Yes').click({ force: true });
               }
+              
 
             });
           });
