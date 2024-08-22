@@ -1,9 +1,9 @@
 describe('user_registration', () => {
     it('passes', () => {
-        const fnameEng = ['Tosmia'];
-        const lnameEng = ['Islam Nishat'];
+        const fnameEng = ['Tosmia1'];
+        const lnameEng = ['Islam Nishat1'];
         const fnameBang = ['তোসমিয়া'];
-        const lnameBang = [' ইসলাম নিশাত'];
+        const lnameBang = [' ইসলাম নিশাত1'];
         const email = `${fnameEng[0].toLowerCase()}@gmail.com`
 
         cy.visit('https://lams.dev.z8.softbd.xyz/');

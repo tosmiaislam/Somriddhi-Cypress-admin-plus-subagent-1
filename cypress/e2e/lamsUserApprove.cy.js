@@ -7,7 +7,7 @@ describe('user_registration', () => {
 
         cy.get('#username').type('admin');
         cy.get('#password').type('121212aA');
-        cy.get('#kc-login').click('');
+        cy.get('#kc-login').click();
         
         cy.get('img[src="https://backend-lsg-dev.z8.softbd.xyz/api/file-upload/view-file/8f21f303-64a8-4339-a721-e9ba4c499066.png"]').click(); 
         // or .should('be.visible');
@@ -24,7 +24,7 @@ describe('user_registration', () => {
         cy.wrap($el).scrollIntoView().click({ force: true });
         cy.get('button').contains('Yes').click({ force: true });
               }
-              
+
 
             });
           });
