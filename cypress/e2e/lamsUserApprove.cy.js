@@ -11,8 +11,8 @@ describe('user_registration', () => {
         
         cy.get('img[src="https://backend-lsg-dev.z8.softbd.xyz/api/file-upload/view-file/8f21f303-64a8-4339-a721-e9ba4c499066.png"]').click(); 
         // or .should('be.visible');
-        cy.contains('Human Resource').click()
-        cy.contains('User').click()
+        cy.contains('Human Resource').click();
+        cy.contains('User').click();
 
 
         // Find all div elements with the role of "button" that contain "Approve" as the label

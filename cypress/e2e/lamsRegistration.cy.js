@@ -84,9 +84,9 @@ describe('user_registration', () => {
         cy.get('#\\:ri\\:').should('have.value', '01/01/2023');
 
         //password
-        cy.get('#\\:rk\\:').type('121212aA')
+        cy.get('#\\:rk\\:').type('121212aA');
         // retype password
-        cy.get('#\\:rl\\:').type('121212aA')
+        cy.get('#\\:rl\\:').type('121212aA');
 
         // Extract the CAPTCHA text
         cy.get('.MuiTypography-root[aria-readonly="true"]').invoke('text').then((captchaText) => {
