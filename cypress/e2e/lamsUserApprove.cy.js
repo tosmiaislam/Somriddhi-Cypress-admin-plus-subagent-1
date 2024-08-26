@@ -25,7 +25,6 @@ describe('user_registration', () => {
         cy.get('button').contains('Yes').click({ force: true });
               }
 
-
             });
           });
       
