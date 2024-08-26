@@ -17,6 +17,7 @@ describe('user_registration', () => {
         cy.get('#\\:r6\\:').type('mokbul@softbd.com');
         cy.get('#\\:r7\\:').type('1234567890');        
         cy.get('#\\:r8\\:').type('01/01/2000');
+        
         cy.get('#\\:ra\\:').click();
         cy.get('ul[role="listbox"] li').contains('Officer').click();
         cy.get('#\\:rc\\:').click();
