@@ -12,13 +12,13 @@ describe('dropdown handel plus makeing user from admin',()=>{
         cy.get('.mb-0 > .form-control').type('password').wait(1000)
         cy.contains("Log In").wait(1000).click()
         cy.contains('Dashboard').click();
-        cy.contains('User Management').click();
+        cy.contains('User Management').click()
         cy.contains('Users').click();
         cy.contains('Add New').click();
 
         //for name
         var name = Name[a];
-        cy.get('#name').should('have.attr', 'placeholder', 'Name').type(name);
+        cy.get('#name').should('have.attr', 'placeholder', 'Name').type(name)
 
         //for user name
         var Username = UserName[a]
