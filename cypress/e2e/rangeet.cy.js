@@ -27,7 +27,6 @@ cy.scrollTo('bottom', { duration: 10000 })
  
   cy.contains('a[title="Categories"]', 'Categories').find('span').wait(3000).click()
 
- //cy.get(':nth-child(2) > .has-submenu > span').click()
   cy.contains('a[title="Reporting Engine"]', 'Reporting Engine').find('span').wait(3000).click()
     cy.contains('a[title="Class Data Report"]', 'Class Data Report').find('span').wait(3000).click()
     cy.contains('a[title="BL/EL Report"]', 'BL/EL Report').find('span').wait(3000).click()
