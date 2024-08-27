@@ -26,7 +26,7 @@ describe('user_registration', () => {
           
         // Scroll the element into view and click it
         cy.wrap($el).scrollIntoView().click({ force: true });
-        cy.get('button').contains('Yes').click({ force: true });
+        cy.get('button').contains('Yes').click({ force: true })
               }
 
             });
