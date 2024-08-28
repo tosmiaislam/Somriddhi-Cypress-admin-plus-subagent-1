@@ -24,6 +24,7 @@ describe('user_registration', () => {
         cy.wrap($el).find('span.MuiChip-label').then(($span) => {
         if ($span.text().trim() === 'Approve') {
           
+          
         // Scroll the element into view and click it
         cy.wrap($el).scrollIntoView().click({ force: true });
         cy.get('button').contains('Yes').click({ force: true });

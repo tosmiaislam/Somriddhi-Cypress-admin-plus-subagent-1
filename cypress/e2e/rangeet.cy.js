@@ -9,7 +9,6 @@ it('user should be able to log in', () => {
   // submit the form 
   cy.get('.btn-login').wait(1000).click();
 
-
 // Scroll down to the footer
 cy.scrollTo('bottom', { duration: 10000 });
  
