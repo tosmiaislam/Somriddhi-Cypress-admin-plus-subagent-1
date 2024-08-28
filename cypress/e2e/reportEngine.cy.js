@@ -7,7 +7,7 @@ describe('template spec', () => {
         cy.get('input[type="password"]').type('123456').wait(3000)
 
   // submit the form 
-  cy.get('.btn-login').wait(1000).click()
+  cy.get('.btn-login').wait(1000).click();
       
       cy.contains('a[title="Reporting Engine"]', 'Reporting Engine').find('span').wait(3000).click()
       cy.contains('a[title="Class Data Report"]', 'Class Data Report').find('span').wait(3000).click()

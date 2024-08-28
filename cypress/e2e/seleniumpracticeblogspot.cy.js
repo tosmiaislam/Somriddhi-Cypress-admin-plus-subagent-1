@@ -6,6 +6,7 @@ describe('dropdown handel',()=>{
         cy.get("a[role='menuitem']").each(function($ele, index, list){
            if ($ele.text()==='JavaScript'){
             cy.log("Found it")
+            
             cy.wrap($ele).click()
             cy.title().should("include", "Automation")
 
