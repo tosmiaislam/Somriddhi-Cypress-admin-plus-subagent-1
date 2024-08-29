@@ -35,12 +35,12 @@ describe('dropdown handel plus makeing user from admin',()=>{
         cy.get('#password_confirmation').should('have.attr', 'placeholder', 'Confirm Password').type('password');
 
         //1st dropdown
-        cy.get('#user_type_id').select('Sub Agent')
+        cy.get('#user_type_id').select('Sub Agent');
 
         //2nd dropdown - type select dropdown
-        cy.get("textarea[placeholder='Select Roles']").click()
-        cy.get("textarea[placeholder='Select Roles']").type('Suba')
-        cy.get("textarea[placeholder='Select Roles']").type('{enter}')
+        cy.get("textarea[placeholder='Select Roles']").click();
+        cy.get("textarea[placeholder='Select Roles']").type('Suba');
+        cy.get("textarea[placeholder='Select Roles']").type('{enter}');
 
         cy.get("button[type='submit']").click()
 

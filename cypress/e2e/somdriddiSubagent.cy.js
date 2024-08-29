@@ -17,7 +17,7 @@ describe('dropdown handel',()=>{
         cy.get('#BILL_NUMBER').should('have.attr', 'placeholder', 'ENTER YOUR BILL NUMBER').type("T82372008641");
         cy.contains('See Your Bill').click();
 
-        // cy.get("textarea[placeholder='Select Roles']").type('Suba')
+        //// cy.get("textarea[placeholder='Select Roles']").type('Suba')
         //cy.get("textarea[placeholder='Select Roles']").type('{enter}')
     
     })
