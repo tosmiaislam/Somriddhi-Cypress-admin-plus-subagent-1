@@ -8,11 +8,11 @@ describe('dropdown handel plus makeing user from admin',()=>{
     it('user can handel dropsown',()=>{
         cy.visit("https://somriddhi.eksheba.gov.bd/");
         //cy.viewport(1520, 1080)
-        cy.get('.mb-3 > .form-control').type(' admin@gmail.com').wait(1000)
-        cy.get('.mb-0 > .form-control').type('password').wait(1000)
-        cy.contains("Log In").wait(1000).click()
+        cy.get('.mb-3 > .form-control').type(' admin@gmail.com').wait(1000);
+        cy.get('.mb-0 > .form-control').type('password').wait(1000);
+        cy.contains("Log In").wait(1000).click();
         cy.contains('Dashboard').click();
-        cy.contains('User Management').click()
+        cy.contains('User Management').click();
         cy.contains('Users').click();
         cy.contains('Add New').click();
 
