@@ -3,10 +3,10 @@ describe('It will be registration by otp', () => {
       cy.visit('https://admin.projectrangeet.com/admin/register')
       
       //1st dropdown
-      cy.get('#registration_type').select('ORGANIZATION')
+      cy.get('#registration_type').select('ORGANIZATION');
 
-      cy.get('#organization_name').type('tosmia')
-      cy.get('#name').type("fecilitor")
+      cy.get('#organization_name').type('tosmia');
+      cy.get('#name').type("fecilitor");
 
       //random phone number seeding
       const randomPhoneNumber = '7' + Math.floor(Math.random() * 900000000 + 100000000);
@@ -20,17 +20,17 @@ describe('It will be registration by otp', () => {
       //2nd dropdown - city select dropdown i gave value no in select(3)
 
       cy.get('#locale_state', { timeout: 10000 }).should('be.visible');
-      cy.get('select[name="locale_state"]').select(3)
+      cy.get('select[name="locale_state"]').select(3);
         
 
       cy.get('#organization_type', { timeout: 10000 }).should('be.visible');
-      cy.get('select[name="organization_type"]').select(3)
+      cy.get('select[name="organization_type"]').select(3);
 
 
-      cy.get('#password').type("123456")
-      cy.get('#password-confirm').type("123456")
+      cy.get('#password').type("123456");
+      cy.get('#password-confirm').type("123456");
 
-      cy.get('#continue-button').click()
+      cy.get('#continue-button').click();
         
 
        // Step 8: Wait for the OTP email to arrive and retrieve the OTP
