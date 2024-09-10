@@ -38,12 +38,12 @@ describe('It will be registration by otp', () => {
 
     cy.request('https://yopmail.com/en/wm')
       .then(html => {
-        const otpLine = html.body.match(/.*OTP.*/)
+        const otpLine = html.body.match(/.*OTP.*/);
         const blodText = otpLine[0].match(/<p>\d+/)[0]
       }).then(otp =>{
         cy.get('#totp').type(otp)
       })
-      cy.url().should('eq', 'https://admin.projectrangeet.com/')
+      cy.url().should('eq', 'https://admin.projectrangeet.com/');
     
       })
     
